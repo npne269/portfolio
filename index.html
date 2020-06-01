@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nitesh Neupane</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<nav id="navbar">
+  <a href="#welcome-section">Nitesh Neupane</a>
+
+  <button onclick="myFunction()" class="dropbtn"><div id="dropdown"></div></button>
+
+  <div id="navbar-link">
+      <a href="#projects">Projects</a>
+      <a target="_blank" href="https://codepen.io/npne269">CodePen</a>
+      <a target="_blank" href="https://twitter.com/sudo_nitesh" >Twitter</a>
+      <a id="profile-link" href="https://github.com/npne269" target="_blank">GitHub</a>
+  </div>
+
+  <div id="dropdown-link" class="dropdown-content">
+      <a href="#projects">Projects</a>
+      <a target="_blank" href="https://codepen.io/npne269">CodePen</a>
+      <a target="_blank" href="https://twitter.com/sudo_nitesh" >Twitter</a>
+      <a id="profile-link" href="https://github.com/npne269" target="_blank">GitHub</a>
+  </div>
+
+</nav>
+
+
+<div id="welcome-section">
+  <div id="overlay">
+    <h1>Hey Mate!!<br> Its me Nitesh</h1>
+    <p>Welcome to my site</p>
+  </div>
+  
+</div>
+<div id="projects">
+  <h1> Show Case</h1>
+
+  <a class="project-tile" href="https://codepen.io/npne269/full/GRpVveG" target="_blank">
+      <img src="images/tech.png">
+      <p>Technical Documentation Page</p>
+  </a>
+  
+  <a class="project-tile" href="https://codepen.io/npne269/full/VwvJvra" target="_blank">
+      <img src="images/tribute.png">
+      <p>Tribute To Prithvi Narayan Shah.</p>
+  </a>
+  
+  <a class="project-tile" href="https://codepen.io/npne269/full/KKdjqbG" target="_blank">
+      <img src="images/form.png">
+      <p>Survey Form</p>
+  </a>
+  <div>
+    <script type="text/javascript">
+      function myFunction() {
+        console.log('click');
+  // document.getElementById("dropdown-link").classList.toggle("show");
+
+  var element = document.getElementById("dropdown-link");
+console.log(element.classList)
+if ( element.className.match(/(?:^|\s)show(?!\S)/) ){
+  element.className.replace
+      ( /(?:^|\s)show(?!\S)/g , '' );
+}
+else{
+  element.className += " show";
+}
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+</body>
+</html>
